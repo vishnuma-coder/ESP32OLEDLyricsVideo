@@ -5,9 +5,11 @@
 #include <Adafruit_SSD1306.h>
 
 #ifndef OLED_SDA
+// CHANGE THIS for your board's OLED SDA pin (or set OLED_SDA in platformio.ini).
 #define OLED_SDA 21
 #endif
 #ifndef OLED_SCL
+// CHANGE THIS for your board's OLED SCL pin (or set OLED_SCL in platformio.ini).
 #define OLED_SCL 22
 #endif
 
@@ -21,6 +23,7 @@
 namespace {
 constexpr int WIDTH = 128;
 constexpr int HEIGHT = 64;
+// CHANGE THIS if your OLED uses address 0x3D instead of the common 0x3C.
 constexpr uint8_t OLED_ADDRESS = 0x3C;
 #if HAS_EMBEDDED_VIDEO
 constexpr uint8_t FPS = VIDEO_FRAME_RATE;
